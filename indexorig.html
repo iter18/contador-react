@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <!--
+        Forma tradicional sin JSX y Babel
+    -->
+    <!--<script>
+
+        ReactDOM.render(
+                React.createElement("ul",null,
+                    React.createElement("li",null,"Manzada"),
+                    React.createElement("li",null,"arroz"),
+                    React.createElement("li",null,"Banana")
+                ),
+            document.getElementById("root")
+        );
+
+  
+    </script>-->
+    <!--
+        Forma con JSX y Babel
+    -->
+    <script type="text/babel">
+        /**
+         * Renderizar o pintar elementos html con JSX y Babel
+        */
+        /*ReactDOM.render(
+            <div>
+                <h1>Hola Mundo</h1>
+                <ol>
+                    <li>Manzana</li>
+                    <li>Pera</li>
+                    <li>Banana</li>
+                </ol>
+            </div>,
+            document.getElementById("root")
+        );*/
+
+        /*Forma antigua pero valida de crear componentes*/
+       /* class Saludo  extends React.Component {
+            render() {
+                return (
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                );
+            }
+        }
+        ReactDOM.render(<Saludo />,document.getElementById("root"));*/
+
+        /*Forma nueva de crear componentes*/
+
+       /* const Saludo = () => {
+            return (
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            );
+        }
+
+        ReactDOM.render(<Saludo />, document.getElementById("root"));*/
+
+        /*Interpolacion de variables = inyeccion de codigo o variables js en  HTML*/
+
+        /*const Interpolacion = () => {
+            
+            const nombre = prompt("Digita tu nombre"); 
+
+            return (
+                <div>
+                    <h1>
+                        HOLA {nombre}
+                    </h1>
+                    <hr/>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<Interpolacion />, document.getElementById("root"));*/
+        /**
+         *  Introducción a los estados:
+         * Un estado es el cambio en el comportamiento de un componente
+         * no se puede cambiar la definición original de un estado, sólo se redefine 
+         *  */
+        /*
+         const Interpolacion = () => {
+
+            const [numero,setNumero] = React.useState(0);
+
+            setInterval(() =>{
+                setNumero(numero + 1);
+            },1500);
+
+             return (
+                <div>
+                    <h1>
+                        Número: {numero}
+                    </h1>
+                    <hr/>
+                </div>
+             );
+         }
+         ReactDOM.render(<Interpolacion />, document.getElementById("root"));*/
+
+    </script>
+</body>
+</html>
